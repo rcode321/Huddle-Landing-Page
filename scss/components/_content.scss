@@ -1,0 +1,215 @@
+// grow together section
+.bg-lt-blue {
+  background: #f6fbff;
+}
+.container-1 {
+  @extend %content-container;
+  @include MQ(mediumScreen) {
+    justify-content: space-evenly;
+  }
+  @include MQ(smallScreen) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .content-1 {
+    align-self: center;
+    @include MQ(smallScreen) {
+      margin: 0 1rem;
+    }
+
+    h3 {
+      @extend %h3;
+      @include MQ(mediumScreen) {
+        font-size: 2.3rem;
+      }
+      @include MQ(smallScreen) {
+        font-size: 2.5rem;
+        margin: 0;
+      }
+      @include MQ(mobileScreen) {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+    }
+
+    p {
+      max-width: 530px;
+      @include MQ(mediumScreen) {
+        font-size: 0.9rem;
+        max-width: 400px;
+      }
+      @include MQ(smallScreen) {
+        font-size: 1rem;
+        max-width: 550px;
+        padding-top: 1.1rem;
+        margin-bottom: 3.5rem;
+      }
+      @include MQ(mobileScreen) {
+        font-size: 0.8rem;
+        max-width: 280px;
+        padding-top: 1.1rem;
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
+  .grow-together-img {
+    width: 30%;
+    padding: 2rem 0;
+    @include MQ(mediumScreen) {
+      // margin-right: 4rem;
+      width: 35%;
+    }
+    @include MQ(smallScreen) {
+      margin-right: 1rem;
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+// flowing convo section
+.container-2 {
+  margin-bottom: 10rem;
+  @extend %content-container;
+  @include MQ(mediumScreen) {
+    justify-content: space-evenly;
+  }
+  @include MQ(smallScreen) {
+    flex-direction: column;
+    text-align: center;
+  }
+  .flowing-convo-img {
+    width: 30%;
+    @include MQ(mediumScreen) {
+      width: 35%;
+    }
+    @include MQ(smallScreen) {
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  .content-2 {
+    @include MQ(smallScreen) {
+      margin: 0 2rem;
+    }
+    align-self: center;
+  }
+
+  h3 {
+    @extend %h3;
+    @include MQ(mediumScreen) {
+      font-size: 2.3rem;
+    }
+    @include MQ(mobileScreen) {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+  }
+
+  p {
+    max-width: 530px;
+    @include MQ(mediumScreen) {
+      font-size: 0.9rem;
+      max-width: 400px;
+    }
+    @include MQ(smallScreen) {
+      margin-right: 0;
+      font-size: 1rem;
+      max-width: 550px;
+    }
+    @include MQ(mobileScreen) {
+      font-size: 0.8rem;
+      max-width: 280px;
+      padding-top: 1.1rem;
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+// your user section
+.container-3 {
+  @extend %content-container;
+  @include MQ(mediumScreen) {
+    justify-content: space-evenly;
+  }
+  @include MQ(smallScreen) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .your-user-img {
+    width: 30%;
+    padding: 2rem 0;
+    @include MQ(mediumScreen) {
+      width: 35%;
+    }
+    @include MQ(smallScreen) {
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  .content-3 {
+    align-self: center;
+    @include MQ(smallScreen) {
+      margin: 0 1rem;
+    }
+  }
+
+  h3 {
+    @extend %h3;
+    @include MQ(mediumScreen) {
+      font-size: 2.3rem;
+    }
+    @include MQ(mobileScreen) {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+  }
+
+  p {
+    max-width: 530px;
+    @include MQ(mediumScreen) {
+      font-size: 0.9rem;
+      max-width: 400px;
+    }
+    @include MQ(smallScreen) {
+      font-size: 1rem;
+      margin-bottom: 3.5rem;
+      max-width: 550px;
+    }
+    @include MQ(mobileScreen) {
+      font-size: 0.8rem;
+      max-width: 280px;
+      padding-top: 1.1rem;
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+
+// Lets build community
+.build-community {
+  text-align: center;
+  margin-bottom: 13rem;
+  h3 {
+    @extend %h3;
+    @include MQ(mediumScreen) {
+      font-size: 2.3rem;
+    }
+    @include MQ(mobileScreen) {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.btn-2 {
+  @extend %btn;
+  @include MQ(mediumScreen) {
+    padding: 1.1rem 5rem;
+  }
+  @include MQ(mobileScreen) {
+    padding: 0.8rem 2.2rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,57 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.header {
+  display: block;
+  .nav {
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
+    @include MQ(mobileScreen) {
+      margin-top: 2rem;
+    }
+    .logo {
+      margin-left: 4rem;
+
+      @include MQ(largeScreen) {
+        width: 210px;
+        height: auto;
+      }
+      @include MQ-1(568px) {
+        width: 160px;
+        height: auto;
+        margin-left: 2rem;
+      }
+      @include MQ(mobileScreen) {
+        width: 30%;
+        height: auto;
+        margin-left: 1.5rem;
+      }
+    }
+
+    .btn-1 {
+      @extend %btn;
+      float: right;
+      margin-right: 4rem;
+      background-color: transparent;
+      border: 1px solid ($Pink);
+      color: $Pink;
+      padding: 0.4rem 2rem;
+      box-shadow: 1px 1px 55px red($Pink);
+      @include MQ(mobileScreen) {
+        margin-right: 1.5rem;
+        padding: 0.3rem 1.3rem;
+        font-size: 0.7rem;
+      }
+      @include MQ-1(568px) {
+        padding: 0.3rem 1.5rem;
+        font-size: 0.9rem;
+        margin-right: 2rem;
+      }
+      @include MQ(mobileScreen) {
+        padding: 0.3rem 1.2rem;
+        font-size: 0.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+// Variables
+$Pink: hsl(322, 100%, 66%);
+$VeryDarkCyan: hsl(192, 100%, 9%);
+$VeryPaleBlue: hsl(207, 100%, 98%);
+$Grey: hsl(0, 0%, 61%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 1px 1px rgb(176, 234, 253);
+  overflow-x: hidden;
+}
+
+// Extend
+
+// mixins
+%btn {
+  border: none;
+  background-color: $Pink;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 2rem;
+  color: $VeryPaleBlue;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  padding: 1.3rem 7rem;
+
+  &:hover {
+    background: #ec44a9;
+    transition-duration: 0.5s;
+    color: $VeryPaleBlue;
+  }
+}
+
+%h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: "Poppins";
+}
+
+%content-container {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  // justify-content: space-between;
+  // justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+@mixin milestone-heading {
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: $Grey;
+  }
+  h2 {
+    font-size: 5rem;
+  }
+}
+@mixin MQ-1($args) {
+  @media only screen and (max-width: $args) {
+    @content;
+  }
+}
+@mixin MQ($breakpoint) {
+  @if $breakpoint == largeScreen {
+    @media only screen and (max-width: 1280px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mediumScreen {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if $breakpoint == smallScreen {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == mobileScreen {
+    @media only screen and (max-width: 375px) {
+      @content;
+    }
+  }
+}

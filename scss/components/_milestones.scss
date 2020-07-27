@@ -1,0 +1,70 @@
+.milestones {
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 9rem;
+  @include milestone-heading;
+  @include MQ(smallScreen) {
+    padding: 0;
+  }
+  @include MQ-1(568px) {
+    flex-direction: column;
+  }
+  @include MQ(mobileScreen) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .communities {
+    display: flex;
+    flex-direction: column;
+    @include MQ-1(568px) {
+      align-self: center;
+      margin-bottom: 7rem;
+    }
+    @include MQ(mobileScreen) {
+      align-self: center;
+      margin-bottom: 7rem;
+    }
+  }
+  h2 {
+    @include MQ(mobileScreen) {
+      font-size: 3.3rem;
+    }
+  }
+  p {
+    @include MQ(mobileScreen) {
+      font-size: 0.9rem;
+    }
+  }
+  .communities img {
+    width: 47px;
+    height: 41px;
+    order: -1;
+    @include MQ(mobileScreen) {
+      width: 30px;
+      height: 26px;
+      margin-top: 2rem;
+    }
+  }
+  .message-sent {
+    display: flex;
+    flex-direction: column;
+    @include MQ-1(568px) {
+      align-self: center;
+      margin-bottom: 7rem;
+    }
+    @include MQ(mobileScreen) {
+      align-self: center;
+      margin-bottom: 3rem;
+    }
+  }
+  .message-sent img {
+    width: 48px;
+    height: 40px;
+    order: -1;
+    @include MQ(mobileScreen) {
+      width: 30px;
+      height: 26px;
+    }
+  }
+}

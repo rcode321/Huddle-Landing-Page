@@ -1,0 +1,81 @@
+.hero {
+  text-align: center;
+  margin-top: 12rem;
+  @include MQ(mobileScreen) {
+    margin-top: 7rem;
+  }
+  h1 {
+    font-size: 3rem;
+    font-family: "Poppins";
+    padding: 1rem 0;
+    margin: 0 10rem;
+    @include MQ(largeScreen) {
+      font-size: 2.7rem;
+    }
+    @include MQ(smallScreen) {
+      font-size: 2.8rem;
+      margin: 0 5rem;
+    }
+    @include MQ-1(568px) {
+      font-size: 2rem;
+      margin: 0 1rem;
+    }
+    @include MQ(mobileScreen) {
+      font-size: 1.5rem;
+      margin: 0 2.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.4rem;
+    max-width: 50%;
+    margin: auto;
+    line-height: 1.9rem;
+    padding: 0.4rem 0;
+    margin-bottom: 2.5rem;
+    @include MQ(largeScreen) {
+      font-size: 1.2rem;
+    }
+    @include MQ-1(568px) {
+      font-size: 1rem;
+    }
+    @include MQ(smallScreen) {
+      max-width: 80%;
+      font-size: 1rem;
+      line-height: 1.7rem;
+    }
+    @include MQ(mobileScreen) {
+      max-width: 73%;
+      font-size: 0.8rem;
+      line-height: 1.3rem;
+      text-shadow: none;
+    }
+  }
+
+  .hero-btn {
+    @extend %btn;
+    @include MQ(largeScreen) {
+      padding: 1.1rem 5rem;
+    }
+    @include MQ-1(568px) {
+      padding: 1rem 4rem;
+    }
+    @include MQ(mobileScreen) {
+      padding: 0.8rem 3.2rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  .screen-mockups-img {
+    padding: 5rem 0;
+    @include MQ(largeScreen) {
+      width: 89%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include MQ(mobileScreen) {
+      padding: 3rem 0;
+    }
+  }
+}
